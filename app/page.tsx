@@ -3,14 +3,7 @@
 import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { motion } from "framer-motion";
-export default function Home() {
-  return (
-    <main>
-      <h1>Hello, Wetland!</h1>
-      <p>This is the homepage of your wetland conservation project.</p>
-    </main>
-  )
-}
+
 
 export default function WetlandConservation() {
   return (

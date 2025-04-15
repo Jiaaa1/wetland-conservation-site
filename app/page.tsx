@@ -4,7 +4,6 @@ import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { motion } from "framer-motion";
 
-
 export default function WetlandConservation() {
   return (
     <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">

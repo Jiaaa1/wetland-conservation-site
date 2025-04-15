@@ -1,5 +1,3 @@
-// app/page.tsx
-
 'use client';
 
 import React, { useState } from 'react';
@@ -9,7 +7,6 @@ import { motion } from "framer-motion";
 import Link from 'next/link';
 
 export default function HomePage() {
-  // 这里是表单所需的 state，用于收集用户输入
   const [formData, setFormData] = useState({
     socialIdentity: '',
     awareness: 'low',
@@ -27,14 +24,22 @@ export default function HomePage() {
     e.preventDefault();
     alert(`Thank you! We have recorded your feedback. Your identity: ${formData.socialIdentity}`);
     console.log(formData);
-    // 提交后可清空表单
     setFormData({ socialIdentity: '', awareness: 'low', message: '' });
   };
 
   return (
     <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">
 
-    
+      {/* 页面导航（Explore Pantanal 已移除） */}
+      <nav className="mb-6 flex gap-4">
+        <Link href="/wetlands">
+          <Button>General Wetlands</Button>
+        </Link>
+        <Link href="/about">
+          <Button>About This Project</Button>
+        </Link>
+      </nav>
+
       <header className="text-center py-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -45,8 +50,7 @@ export default function HomePage() {
             Wetland Conservation Project
           </h1>
           <p className="text-lg max-w-2xl mx-auto">
-            Exploring community engagement and international policies
-            for sustainable wetland management.
+            Exploring community engagement and international policies for sustainable wetland management.
             <br />
             <span className="text-sm text-green-700 italic">
               Created by Jiayi Liu
@@ -56,7 +60,7 @@ export default function HomePage() {
       </header>
 
       <main className="grid gap-6 max-w-5xl mx-auto">
-        {/* Section 1: Wetland Importance */}
+        {/* Why Wetlands Matter */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,22 +78,16 @@ export default function HomePage() {
                 Why Wetlands Matter
               </h2>
               <p>
-                Wetlands are vital ecosystems that support biodiversity, 
-                improve water quality, mitigate floods, and store carbon. 
-                Protecting them is crucial for both people and the planet.
+                Wetlands are vital ecosystems that support biodiversity, improve water quality, mitigate floods, and store carbon. Protecting them is crucial for both people and the planet.
               </p>
               <p className="mt-2">
-                According to Leibowitz and Nadeau (2003), isolated wetlands play 
-                a critical role in biodiversity, water purification, and 
-                maintaining hydrologic balance. Salimi et al. (2021) further 
-                emphasize their contribution to climate regulation through 
-                carbon storage.
+                According to Leibowitz and Nadeau (2003), isolated wetlands play a critical role in biodiversity, water purification, and maintaining hydrologic balance. Salimi et al. (2021) further emphasize their contribution to climate regulation through carbon storage.
               </p>
             </CardContent>
           </Card>
         </motion.div>
 
-        {/* Section 2: Global Laws */}
+        {/* Global Conservation Laws */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -98,28 +96,18 @@ export default function HomePage() {
         >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">
-                Global Conservation Laws
-              </h2>
+              <h2 className="text-2xl font-semibold mb-2">Global Conservation Laws</h2>
               <p>
-                Countries like China, the U.S., and members of the EU have
-                developed different legal approaches to wetland protection.
-                While China's policy is centralized and state-led, the U.S.
-                focuses on pollution control through acts like the Clean Water
-                Act, and the EU emphasizes biodiversity with initiatives like
-                Natura 2000.
+                Countries like China, the U.S., and members of the EU have developed different legal approaches to wetland protection. While China's policy is centralized and state-led, the U.S. focuses on pollution control through acts like the Clean Water Act, and the EU emphasizes biodiversity with initiatives like Natura 2000.
               </p>
               <p className="mt-2">
-                Deng and Jiang (2023) explain how China’s Wetland Protection Law 
-                marks a legal shift aligning national strategies with global goals.
-                These international differences reflect each region’s 
-                environmental priorities.
+                Deng and Jiang (2023) explain how China’s Wetland Protection Law marks a legal shift aligning national strategies with global goals. These international differences reflect each region’s environmental priorities.
               </p>
             </CardContent>
           </Card>
         </motion.div>
 
-        {/* Section 3: Community Involvement */}
+        {/* Community Involvement */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -128,21 +116,12 @@ export default function HomePage() {
         >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">
-                Local Community Involvement
-              </h2>
+              <h2 className="text-2xl font-semibold mb-2">Local Community Involvement</h2>
               <p>
-                Engaging local residents in conservation efforts leads to 
-                more sustainable and effective outcomes. Community education, 
-                participatory policy-making, and indigenous knowledge 
-                play a key role.
+                Engaging local residents in conservation efforts leads to more sustainable and effective outcomes. Community education, participatory policy-making, and indigenous knowledge play a key role.
               </p>
               <p className="mt-2">
-                O’Donnell and Galat (2008) emphasize the role of adaptive, 
-                community-led restoration for long-term success. Krasny and 
-                Tidball (2009) show that when people learn through shared
-                action—like gardens or volunteering—they build deeper care 
-                for ecosystems.
+                O’Donnell and Galat (2008) emphasize the role of adaptive, community-led restoration for long-term success. Krasny and Tidball (2009) show that when people learn through shared action—like gardens or volunteering—they build deeper care for ecosystems.
               </p>
             </CardContent>
           </Card>
@@ -157,14 +136,9 @@ export default function HomePage() {
         >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">
-                Public Survey Video: Yellow River Basin
-              </h2>
+              <h2 className="text-2xl font-semibold mb-2">Public Survey Video: Yellow River Basin</h2>
               <p className="mb-4">
-                This video presents a public awareness survey about wetland 
-                protection in Qinghai and Shandong. It provides valuable grassroots 
-                perspectives, which are essential for understanding 
-                real-world conservation awareness.
+                This video presents a public awareness survey about wetland protection in Qinghai and Shandong. It provides valuable grassroots perspectives, which are essential for understanding real-world conservation awareness.
               </p>
               <div className="aspect-video">
                 <iframe
@@ -190,22 +164,14 @@ export default function HomePage() {
         >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-4">
-                Planned Survey & Next Steps
-              </h2>
+              <h2 className="text-2xl font-semibold mb-4">Planned Survey & Next Steps</h2>
               <p className="mb-4">
-                Please share with us your background and thoughts on 
-                wetland protection. Your feedback will help shape future 
-                improvements to this project and guide real-world 
-                conservation efforts.
+                Please share with us your background and thoughts on wetland protection. Your feedback will help shape future improvements to this project and guide real-world conservation efforts.
               </p>
               
               <form onSubmit={handleSubmit} className="space-y-6 bg-white p-4 rounded-md shadow-inner">
                 <div>
-                  <label
-                    htmlFor="socialIdentity"
-                    className="block mb-2 font-medium text-green-900"
-                  >
+                  <label htmlFor="socialIdentity" className="block mb-2 font-medium text-green-900">
                     Your Role / Social Identity:
                   </label>
                   <input
@@ -220,16 +186,12 @@ export default function HomePage() {
                     required
                   />
                   <p className="text-xs text-green-700 mt-1">
-                    Briefly describe your role or occupation that might 
-                    influence your perspective on wetland conservation.
+                    Please briefly describe your role or occupation that might influence your perspective on wetland conservation.
                   </p>
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="awareness"
-                    className="block mb-2 font-medium text-green-900"
-                  >
+                  <label htmlFor="awareness" className="block mb-2 font-medium text-green-900">
                     Your Awareness Level:
                   </label>
                   <select
@@ -245,16 +207,12 @@ export default function HomePage() {
                     <option value="high">High</option>
                   </select>
                   <p className="text-xs text-green-700 mt-1">
-                    How familiar are you with wetland ecosystems and 
-                    conservation practices?
+                    How familiar are you with wetland ecosystems and conservation practices?
                   </p>
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block mb-2 font-medium text-green-900"
-                  >
+                  <label htmlFor="message" className="block mb-2 font-medium text-green-900">
                     Any Comments or Suggestions:
                   </label>
                   <textarea

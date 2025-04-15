@@ -34,20 +34,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">
 
-      {/* 1) 导航按钮，可放在页面顶部或某处明显位置 */}
-      <nav className="mb-6 flex gap-4">
-        <Link href="/pantanal">
-          <Button>Explore Pantanal</Button>
-        </Link>
-        <Link href="/wetlands">
-          <Button>General Wetlands</Button>
-        </Link>
-        <Link href="/about">
-          <Button>About This Project</Button>
-        </Link>
-      </nav>
-      {/* 以上三段 link-to-button 将跳转到新页面 pantanal、wetlands、about */}
-
+    
       <header className="text-center py-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

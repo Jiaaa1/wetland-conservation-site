@@ -66,9 +66,8 @@ export default function HomePage() {
           >
           <p><strong>Research Question:</strong> How can international legal frameworks and community engagement strategies work together to enhance wetland conservation outcomes?</p>
           <p className="mt-3"><strong>Intended Audience:</strong> This project is intended for students, educators, and environmentally conscious citizens who are interested in practical and policy-driven solutions for wetland protection.</p>
-
-  <p className="mt-3"><strong>Exigence:</strong> Wetlands, critical ecosystems for biodiversity and climate regulation, are rapidly degrading worldwide due to human activities and climate change. Understanding and integrating both top-down legal measures and grassroots community efforts has become urgent to ensure their sustainable future.</p>
-</motion.div>
+          <p className="mt-3"><strong>Exigence:</strong> Wetlands, critical ecosystems for biodiversity and climate regulation, are rapidly degrading worldwide due to human activities and climate change. Understanding and integrating both top-down legal measures and grassroots community efforts has become urgent to ensure their sustainable future.</p>
+        </motion.div>
 
       </header>
 

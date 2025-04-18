@@ -243,14 +243,15 @@ export default function HomePage() {
 <section className="mt-16">
   <h2 className="text-xl font-semibold mb-4 text-center">References</h2>
   <ul className="text-sm text-green-800 list-disc list-inside space-y-2">
-    <li>Leibowitz, S.G., & Nadeau, T.L. (2003). Isolated wetlands: State-of-the-science review. Wetlands, 23(3), 517-531.</li>
-    <li>Salimi, S., Gascoigne, W., & Erwin, K.L. (2021). Carbon sequestration in wetlands: Implications for climate change mitigation. Journal of Environmental Management, 277.</li>
-    <li>Deng, Y., & Jiang, M. (2023). Legislative reform for wetland protection in China: A case study. Environmental Policy and Law, 53(2).</li>
-    <li>O'Donnell, T.K., & Galat, D.L. (2008). Evaluating success criteria and project monitoring in wetland restoration: A case study. Wetlands Ecology and Management, 16(5).</li>
-    <li>Krasny, M.E., & Tidball, K.G. (2009). Applying civic ecology for community resilience. Journal of Environmental Education, 40(4).</li>
-    <li>Yellow River Basin Public Awareness Survey. (2024). [Video]. YouTube. https://www.youtube.com/embed/Hvl-EUzgDHo</li>
+    <li>Leibowitz, S. G., & Nadeau, T. L. (2003). Isolated wetlands: State-of-the-science and future directions. <em>Wetlands, 23</em>(3), 663–684. https://doi.org/10.1672/0277-5212(2003)023[0663:IWSAFD]2.0.CO;2</li>
+    <li>Salimi, S., Almuktar, S. A. A. A. N., & Scholz, M. (2021). Impact of climate change on wetland ecosystems: A critical review of experimental wetlands. <em>Journal of Environmental Management, 286</em>, 112160. https://doi.org/10.1016/j.jenvman.2021.112160</li>
+    <li>Deng, Y.-C., & Jiang, X. (2023). Wetland Protection Law of the People’s Republic of China: New efforts in wetland conservation. <em>The International Journal of Marine and Coastal Law, 38</em>(1), 141–160. https://doi.org/10.1163/15718085-bja10115</li>
+    <li>O’Donnell, T. K., & Galat, D. L. (2008). Evaluating success criteria and project monitoring in river enhancement within an adaptive management framework. <em>Environmental Management, 41</em>(1), 90–105. https://doi.org/10.1007/s00267-007-9010-5</li>
+    <li>Krasny, M. E., & Tidball, K. G. (2009). Community gardens as contexts for science, stewardship, and civic action learning. <em>Cities and the Environment, 2</em>(1), Article 8. https://digitalcommons.lmu.edu/cate/vol2/iss1/8</li>
+    <li>China Biodiversity Conservation and Green Development Foundation. (2023, June). Public survey report on wetland protection in the Yellow River Basin [Video]. YouTube. https://www.youtube.com/watch?v=Hvl-EUzgDHo</li>
   </ul>
 </section>
+
 
       <footer className="text-center mt-12 text-sm text-green-700">
         © 2025 Wetland Conservation Project by Jiayi Liu. All rights reserved.

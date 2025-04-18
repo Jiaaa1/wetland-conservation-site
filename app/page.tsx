@@ -62,11 +62,17 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-md max-w-2xl mx-auto text-green-800 mt-6 leading-relaxed"
-          >
-          <p><strong>Research Question:</strong> How can international legal frameworks and community engagement strategies work together to enhance wetland conservation outcomes?</p>
-          <p className="mt-3"><strong>Intended Audience:</strong> This project is intended for students, educators, and environmentally conscious citizens who are interested in practical and policy-driven solutions for wetland protection.</p>
-          <p className="mt-3"><strong>Exigence:</strong> Wetlands, critical ecosystems for biodiversity and climate regulation, are rapidly degrading worldwide due to human activities and climate change. Understanding and integrating both top-down legal measures and grassroots community efforts has become urgent to ensure their sustainable future.</p>
+          className="text-base max-w-2xl mx-auto text-green-800 mt-6 leading-relaxed"
+        >
+          <p>
+            <strong>Research Question:</strong> How can international legal frameworks and community engagement strategies work together to enhance wetland conservation outcomes?
+          </p>
+          <p className="mt-3">
+            <strong>Intended Audience:</strong> This project is intended for students, educators, and environmentally conscious citizens who are interested in practical and policy-driven solutions for wetland protection.
+          </p>
+          <p className="mt-3">
+            <strong>Exigence:</strong> Wetlands, critical ecosystems for biodiversity and climate regulation, are rapidly degrading worldwide due to human activities and climate change. Understanding and integrating both top-down legal measures and grassroots community efforts has become urgent to ensure their sustainable future.
+          </p>
         </motion.div>
 
       </header>
@@ -252,18 +258,17 @@ export default function HomePage() {
         </motion.div>
       </main>
       
-<section className="mt-16">
-  <h2 className="text-xl font-semibold mb-4 text-center">References</h2>
-  <ul className="text-sm text-green-800 list-disc list-inside space-y-2">
-    <li>Leibowitz, S. G., & Nadeau, T. L. (2003). Isolated wetlands: State-of-the-science and future directions. <em>Wetlands, 23</em>(3), 663–684. https://doi.org/10.1672/0277-5212(2003)023[0663:IWSAFD]2.0.CO;2</li>
-    <li>Salimi, S., Almuktar, S. A. A. A. N., & Scholz, M. (2021). Impact of climate change on wetland ecosystems: A critical review of experimental wetlands. <em>Journal of Environmental Management, 286</em>, 112160. https://doi.org/10.1016/j.jenvman.2021.112160</li>
-    <li>Deng, Y.-C., & Jiang, X. (2023). Wetland Protection Law of the People’s Republic of China: New efforts in wetland conservation. <em>The International Journal of Marine and Coastal Law, 38</em>(1), 141–160. https://doi.org/10.1163/15718085-bja10115</li>
-    <li>O’Donnell, T. K., & Galat, D. L. (2008). Evaluating success criteria and project monitoring in river enhancement within an adaptive management framework. <em>Environmental Management, 41</em>(1), 90–105. https://doi.org/10.1007/s00267-007-9010-5</li>
-    <li>Krasny, M. E., & Tidball, K. G. (2009). Community gardens as contexts for science, stewardship, and civic action learning. <em>Cities and the Environment, 2</em>(1), Article 8. https://digitalcommons.lmu.edu/cate/vol2/iss1/8</li>
-    <li>China Biodiversity Conservation and Green Development Foundation. (2023, June). Public survey report on wetland protection in the Yellow River Basin [Video]. YouTube. https://www.youtube.com/watch?v=Hvl-EUzgDHo</li>
-  </ul>
-</section>
-
+      <section className="mt-16">
+        <h2 className="text-xl font-semibold mb-4 text-center">References</h2>
+        <ul className="text-sm text-green-800 list-disc list-inside space-y-2">
+          <li>Leibowitz, S. G., & Nadeau, T. L. (2003). Isolated wetlands: State-of-the-science and future directions. <em>Wetlands, 23</em>(3), 663–684. https://doi.org/10.1672/0277-5212(2003)023[0663:IWSAFD]2.0.CO;2</li>
+          <li>Salimi, S., Almuktar, S. A. A. A. N., & Scholz, M. (2021). Impact of climate change on wetland ecosystems: A critical review of experimental wetlands. <em>Journal of Environmental Management, 286</em>, 112160. https://doi.org/10.1016/j.jenvman.2021.112160</li>
+          <li>Deng, Y.-C., & Jiang, X. (2023). Wetland Protection Law of the People’s Republic of China: New efforts in wetland conservation. <em>The International Journal of Marine and Coastal Law, 38</em>(1), 141–160. https://doi.org/10.1163/15718085-bja10115</li>
+          <li>O’Donnell, T. K., & Galat, D. L. (2008). Evaluating success criteria and project monitoring in river enhancement within an adaptive management framework. <em>Environmental Management, 41</em>(1), 90–105. https://doi.org/10.1007/s00267-007-9010-5</li>
+          <li>Krasny, M. E., & Tidball, K. G. (2009). Community gardens as contexts for science, stewardship, and civic action learning. <em>Cities and the Environment, 2</em>(1), Article 8. https://digitalcommons.lmu.edu/cate/vol2/iss1/8</li>
+          <li>China Biodiversity Conservation and Green Development Foundation. (2023, June). Public survey report on wetland protection in the Yellow River Basin [Video]. YouTube. https://www.youtube.com/watch?v=Hvl-EUzgDHo</li>
+        </ul>
+      </section>
 
       <footer className="text-center mt-12 text-sm text-green-700">
         © 2025 Wetland Conservation Project by Jiayi Liu. All rights reserved.

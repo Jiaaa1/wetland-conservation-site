@@ -239,6 +239,18 @@ export default function HomePage() {
           </Card>
         </motion.div>
       </main>
+      
+<section className="mt-16">
+  <h2 className="text-xl font-semibold mb-4 text-center">References</h2>
+  <ul className="text-sm text-green-800 list-disc list-inside space-y-2">
+    <li>Leibowitz, S.G., & Nadeau, T.L. (2003). Isolated wetlands: State-of-the-science review. Wetlands, 23(3), 517-531.</li>
+    <li>Salimi, S., Gascoigne, W., & Erwin, K.L. (2021). Carbon sequestration in wetlands: Implications for climate change mitigation. Journal of Environmental Management, 277.</li>
+    <li>Deng, Y., & Jiang, M. (2023). Legislative reform for wetland protection in China: A case study. Environmental Policy and Law, 53(2).</li>
+    <li>O'Donnell, T.K., & Galat, D.L. (2008). Evaluating success criteria and project monitoring in wetland restoration: A case study. Wetlands Ecology and Management, 16(5).</li>
+    <li>Krasny, M.E., & Tidball, K.G. (2009). Applying civic ecology for community resilience. Journal of Environmental Education, 40(4).</li>
+    <li>Yellow River Basin Public Awareness Survey. (2024). [Video]. YouTube. https://www.youtube.com/embed/Hvl-EUzgDHo</li>
+  </ul>
+</section>
 
       <footer className="text-center mt-12 text-sm text-green-700">
         © 2025 Wetland Conservation Project by Jiayi Liu. All rights reserved.

@@ -59,10 +59,10 @@ export default function HomePage() {
         </motion.div>
         
         <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  className="text-md max-w-2xl mx-auto text-green-800 mt-6 leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-md max-w-2xl mx-auto text-green-800 mt-6 leading-relaxed"
 >
   <p><strong>Research Question:</strong> How can international legal frameworks and community engagement strategies work together to enhance wetland conservation outcomes?</p>
 

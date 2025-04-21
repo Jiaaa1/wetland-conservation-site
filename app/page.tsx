@@ -55,7 +55,6 @@ export default function HomePage() {
               Created by Jiayi Liu
             </span>
           </p>
-          {/* 新增：中心研究问题+受众+重要性 */}
           <p className="mt-6 text-base max-w-3xl mx-auto text-green-800 leading-relaxed">
             <strong>Research Question:</strong> How can we enhance wetland conservation by fostering community engagement and comparing international protection laws?<br />
             <strong>Target Audience:</strong> Students, environmental advocates, and policymakers.<br />
@@ -173,7 +172,7 @@ export default function HomePage() {
               <p className="mb-4">
                 Please share with us your background and thoughts on wetland protection. Your feedback will help shape future improvements to this project and guide real-world conservation efforts.
               </p>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6 bg-white p-4 rounded-md shadow-inner">
                 <div>
                   <label htmlFor="socialIdentity" className="block mb-2 font-medium text-green-900">
@@ -184,8 +183,7 @@ export default function HomePage() {
                     name="socialIdentity"
                     type="text"
                     placeholder="e.g. Student, Researcher, Environmental Activist..."
-                    className="w-full border border-green-300 rounded px-3 py-2 text-green-900 placeholder-green-400
-                               focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+                    className="w-full border border-green-300 rounded px-3 py-2 text-green-900 placeholder-green-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
                     value={formData.socialIdentity}
                     onChange={handleChange}
                     required
@@ -204,8 +202,7 @@ export default function HomePage() {
                     name="awareness"
                     value={formData.awareness}
                     onChange={handleChange}
-                    className="w-full border border-green-300 rounded px-3 py-2 text-green-900
-                               focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+                    className="w-full border border-green-300 rounded px-3 py-2 text-green-900 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
                   >
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
@@ -225,8 +222,7 @@ export default function HomePage() {
                     name="message"
                     rows={4}
                     placeholder="Share your concerns, ideas, or personal experiences..."
-                    className="w-full border border-green-300 rounded px-3 py-2 text-green-900 placeholder-green-400
-                               focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+                    className="w-full border border-green-300 rounded px-3 py-2 text-green-900 placeholder-green-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
                     value={formData.message}
                     onChange={handleChange}
                   />
@@ -234,8 +230,7 @@ export default function HomePage() {
 
                 <Button
                   type="submit"
-                  className="bg-wetland-blue hover:bg-wetland-dark text-white font-semibold px-4 py-2 rounded 
-                             transition-colors shadow-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="bg-wetland-blue hover:bg-wetland-dark text-white font-semibold px-4 py-2 rounded transition-colors shadow-md focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
                   Submit
                 </Button>
@@ -244,7 +239,7 @@ export default function HomePage() {
           </Card>
         </motion.div>
       </main>
-      
+
       <section className="mt-16">
         <h2 className="text-xl font-semibold mb-4 text-center">References</h2>
         <ul className="text-sm text-green-800 list-disc list-inside space-y-2">

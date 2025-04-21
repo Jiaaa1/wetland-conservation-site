@@ -49,7 +49,7 @@ export default function HomePage() {
             Wetland Conservation Project
           </h1>
           <p className="text-lg max-w-2xl mx-auto">
-            How can we improve wetland conservation through stronger community participation and comparison of international protection laws? <br />
+            "How can we improve wetland conservation through stronger community participation and comparison of international protection laws?" <br />
             This project is designed for students, environmental advocates, and policymakers who are passionate about sustainability. Wetland conservation has never been more critical as we face accelerating climate change and biodiversity loss.
             <br />
             <span className="text-sm text-green-700 italic">

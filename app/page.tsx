@@ -30,7 +30,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">
 
-      {/* 页面导航（Explore Pantanal 已移除） */}
       <nav className="mb-6 flex gap-4">
         <Link href="/wetlands">
           <Button>General Wetlands</Button>
@@ -50,14 +49,14 @@ export default function HomePage() {
             Wetland Conservation Project
           </h1>
           <p className="text-lg max-w-2xl mx-auto">
-            Exploring community engagement and international policies for sustainable wetland management.
+            How can we improve wetland conservation through stronger community participation and comparison of international protection laws? <br />
+            This project is designed for students, environmental advocates, and policymakers who are passionate about sustainability. Wetland conservation has never been more critical as we face accelerating climate change and biodiversity loss.
             <br />
             <span className="text-sm text-green-700 italic">
               Created by Jiayi Liu
             </span>
           </p>
         </motion.div>
-
       </header>
 
       <main className="grid gap-6 max-w-5xl mx-auto">

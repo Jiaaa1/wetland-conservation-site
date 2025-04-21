@@ -49,12 +49,16 @@ export default function HomePage() {
             Wetland Conservation Project
           </h1>
           <p className="text-lg max-w-2xl mx-auto">
-            "How can we improve wetland conservation through stronger community participation and comparison of international protection laws?" <br />
-            This project is designed for students, environmental advocates, and policymakers who are passionate about sustainability. Wetland conservation has never been more critical as we face accelerating climate change and biodiversity loss.
+            Exploring community engagement and international policies for sustainable wetland management.
             <br />
             <span className="text-sm text-green-700 italic">
               Created by Jiayi Liu
             </span>
+          </p>
+          <p className="mt-6 text-base max-w-3xl mx-auto text-green-800 leading-relaxed">
+            <strong>Research Question:</strong> How can we enhance wetland conservation by fostering community engagement and comparing international protection laws?<br />
+            <strong>Target Audience:</strong> Students, environmental advocates, and policymakers.<br />
+            <strong>Importance:</strong> As climate change and biodiversity loss intensify, promoting wetlands' sustainable management is vital for ecological resilience and future generations.
           </p>
         </motion.div>
       </header>

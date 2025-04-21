@@ -13,6 +13,8 @@ export default function HomePage() {
     message: '',
   });
 
+  const currentYear = new Date().getFullYear();
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
@@ -55,9 +57,20 @@ export default function HomePage() {
               Created by Jiayi Liu
             </span>
           </p>
-          <p className="mt-6 text-base max-w-3xl mx-auto text-green-800 leading-relaxed">
-            <strong>Research Question:</strong> How can we enhance wetland conservation by fostering community engagement and comparing international protection laws?<br />
-            <strong>Target Audience:</strong> Students, environmental advocates, and policymakers.<br />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.4 }}
+          className="mt-8 max-w-3xl mx-auto text-green-800 leading-relaxed"
+        >
+          <p className="text-base">
+            <strong>Research Question:</strong> How can we enhance wetland conservation by fostering community engagement and comparing international protection laws?
+          </p>
+          <p className="text-base mt-2">
+            <strong>Target Audience:</strong> Students, environmental advocates, and policymakers.
+          </p>
+          <p className="text-base mt-2">
             <strong>Importance:</strong> As climate change and biodiversity loss intensify, promoting wetlands' sustainable management is vital for ecological resilience and future generations.
           </p>
         </motion.div>
@@ -240,20 +253,20 @@ export default function HomePage() {
         </motion.div>
       </main>
 
-      <section className="mt-16">
+     <section className="mt-16">
         <h2 className="text-xl font-semibold mb-4 text-center">References</h2>
-        <ul className="text-sm text-green-800 list-disc list-inside space-y-2">
-          <li>Leibowitz, S. G., & Nadeau, T. L. (2003). Isolated wetlands: State-of-the-science and future directions. <em>Wetlands, 23</em>(3), 663–684. https://doi.org/10.1672/0277-5212(2003)023[0663:IWSAFD]2.0.CO;2</li>
-          <li>Salimi, S., Almuktar, S. A. A. A. N., & Scholz, M. (2021). Impact of climate change on wetland ecosystems: A critical review of experimental wetlands. <em>Journal of Environmental Management, 286</em>, 112160. https://doi.org/10.1016/j.jenvman.2021.112160</li>
-          <li>Deng, Y.-C., & Jiang, X. (2023). Wetland Protection Law of the People’s Republic of China: New efforts in wetland conservation. <em>The International Journal of Marine and Coastal Law, 38</em>(1), 141–160. https://doi.org/10.1163/15718085-bja10115</li>
-          <li>O’Donnell, T. K., & Galat, D. L. (2008). Evaluating success criteria and project monitoring in river enhancement within an adaptive management framework. <em>Environmental Management, 41</em>(1), 90–105. https://doi.org/10.1007/s00267-007-9010-5</li>
-          <li>Krasny, M. E., & Tidball, K. G. (2009). Community gardens as contexts for science, stewardship, and civic action learning. <em>Cities and the Environment, 2</em>(1), Article 8. https://digitalcommons.lmu.edu/cate/vol2/iss1/8</li>
-          <li>China Biodiversity Conservation and Green Development Foundation. (2023, June). Public survey report on wetland protection in the Yellow River Basin [Video]. YouTube. https://www.youtube.com/watch?v=Hvl-EUzgDHo</li>
+        <ul className="text-sm text-green-800 list-inside space-y-4 px-4">
+          <li><span className="font-medium">Leibowitz, S. G., & Nadeau, T. L.</span> (2003). Isolated wetlands: State-of-the-science and future directions. <em>Wetlands, 23</em>(3), 663–684. <a href="https://doi.org/10.1672/0277-5212(2003)023[0663:IWSAFD]2.0.CO;2" className="text-blue-600 underline">DOI</a></li>
+          <li><span className="font-medium">Salimi, S., Almuktar, S. A. A. A. N., & Scholz, M.</span> (2021). Impact of climate change on wetland ecosystems: A critical review of experimental wetlands. <em>Journal of Environmental Management, 286</em>, 112160. <a href="https://doi.org/10.1016/j.jenvman.2021.112160" className="text-blue-600 underline">DOI</a></li>
+          <li><span className="font-medium">Deng, Y.-C., & Jiang, X.</span> (2023). Wetland Protection Law of the People’s Republic of China: New efforts in wetland conservation. <em>The International Journal of Marine and Coastal Law, 38</em>(1), 141–160. <a href="https://doi.org/10.1163/15718085-bja10115" className="text-blue-600 underline">DOI</a></li>
+          <li><span className="font-medium">O’Donnell, T. K., & Galat, D. L.</span> (2008). Evaluating success criteria and project monitoring in river enhancement within an adaptive management framework. <em>Environmental Management, 41</em>(1), 90–105. <a href="https://doi.org/10.1007/s00267-007-9010-5" className="text-blue-600 underline">DOI</a></li>
+          <li><span className="font-medium">Krasny, M. E., & Tidball, K. G.</span> (2009). Community gardens as contexts for science, stewardship, and civic action learning. <em>Cities and the Environment, 2</em>(1), Article 8. <a href="https://digitalcommons.lmu.edu/cate/vol2/iss1/8" className="text-blue-600 underline">Access</a></li>
+          <li><span className="font-medium">China Biodiversity Conservation and Green Development Foundation.</span> (2023, June). Public survey report on wetland protection in the Yellow River Basin [Video]. YouTube. <a href="https://www.youtube.com/watch?v=Hvl-EUzgDHo" className="text-blue-600 underline">Watch</a></li>
         </ul>
       </section>
 
       <footer className="text-center mt-12 text-sm text-green-700">
-        © 2025 Wetland Conservation Project by Jiayi Liu. All rights reserved.
+        © {currentYear} Wetland Conservation Project by Jiayi Liu. All rights reserved.
       </footer>
     </div>
   );

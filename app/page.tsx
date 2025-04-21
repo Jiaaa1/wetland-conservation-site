@@ -55,6 +55,7 @@ export default function HomePage() {
               Created by Jiayi Liu
             </span>
           </p>
+          {/* 新增：中心研究问题+受众+重要性 */}
           <p className="mt-6 text-base max-w-3xl mx-auto text-green-800 leading-relaxed">
             <strong>Research Question:</strong> How can we enhance wetland conservation by fostering community engagement and comparing international protection laws?<br />
             <strong>Target Audience:</strong> Students, environmental advocates, and policymakers.<br />

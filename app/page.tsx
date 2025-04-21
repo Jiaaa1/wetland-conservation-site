@@ -197,9 +197,233 @@ export default function HomePage() {
                   ></textarea>
                 </div>
 
+                'use client';
+
+import React, { useState } from 'react';
+import { Card, CardContent } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { motion } from "framer-motion";
+import Link from 'next/link';
+
+export default function HomePage() {
+  const [formData, setFormData] = useState({
+    socialIdentity: '',
+    awareness: 'low',
+    message: '',
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert(`Thank you! Your perspective as ${formData.socialIdentity} has been recorded.`);
+    console.log(formData);
+    setFormData({ socialIdentity: '', awareness: 'low', message: '' });
+  };
+
+  return (
+    <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">
+
+      {/* 页面导航 */}
+      <nav className="mb-6 flex gap-4">
+        <Link href="/wetlands"><Button>General Wetlands</Button></Link>
+        <Link href="/about"><Button>About This Project</Button></Link>
+      </nav>
+
+      <header className="text-center py-10">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl font-bold mb-3 tracking-tight">Wetland Conservation Project</h1>
+          <p className="text-lg max-w-2xl mx-auto">
+            Exploring community engagement and international policies for sustainable wetland management.<br />
+            <span className="text-sm text-green-700 italic">Created by Jiayi Liu</span>
+          </p>
+        </motion.div>
+
+        {/* 中心研究问题、受众与紧迫性 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-md max-w-2xl mx-auto text-green-800 mt-6 leading-relaxed"
+        >
+          <p>
+            <strong>Research Question:</strong> How can international legal frameworks and community engagement strategies work together to enhance wetland conservation outcomes?
+          </p>
+          <p className="mt-3">
+            <strong>Intended Audience:</strong> Students, educators, policymakers, and environmentally conscious citizens.
+          </p>
+          <p className="mt-3">
+            <strong>Exigence:</strong> Wetlands, critical ecosystems for biodiversity and climate regulation, are rapidly degrading worldwide, necessitating collaborative action now.
+          </p>
+        </motion.div>
+      </header>
+
+      <main className="grid gap-6 max-w-5xl mx-auto">
+        {/* Why Wetlands Matter */}
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
+          <Card className="rounded-2xl shadow-md">
+            <CardContent className="p-6">
+              <img src="/wetland.jpg" alt="Aerial wetland view" className="rounded-xl mb-4" />
+              <h2 className="text-2xl font-semibold mb-2">Why Wetlands Matter</h2>
+              <p>
+                Wetlands are vital ecosystems that support biodiversity, improve water quality, mitigate floods, and store carbon. Protecting them is crucial for both people and the planet.
+              </p>
+              <p className="mt-2">
+                According to Leibowitz and Nadeau (2003), isolated wetlands play a critical role in biodiversity, water purification, and maintaining hydrologic balance. Salimi et al. (2021) further emphasize their contribution to climate regulation through carbon storage.
+              </p>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Global Conservation Laws */}
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true }}>
+          <Card className="rounded-2xl shadow-md">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-semibold mb-2">Global Conservation Laws</h2>
+              <p>
+                Countries like China, the U.S., and members of the EU have developed different legal approaches to wetland protection. While China's policy is centralized and state-led, the U.S. focuses on pollution control (e.g., Clean Water Act), and the EU emphasizes biodiversity (e.g., Natura 2000).
+              </p>
+              <p className="mt-2">
+                Deng and Jiang (2023) explain how China’s Wetland Protection Law represents a strategic shift aligning national policies with international conservation goals.
+              </p>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Local Community Involvement */}
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} viewport={{ once: true }}>
+          <Card className="rounded-2xl shadow-md">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-semibold mb-2">Local Community Involvement</h2>
+              <p>
+                Engaging local residents in conservation leads to more sustainable and effective outcomes. Community education, participatory policy-making, and indigenous knowledge are key.
+              </p>
+              <p className="mt-2">
+                O’Donnell and Galat (2008) highlight adaptive, community-led restoration for long-term success. Krasny and Tidball (2009) show that civic ecology projects foster stewardship.
+              </p>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Public Survey Video */}
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.3 }} viewport={{ once: true }}>
+          <Card className="rounded-2xl shadow-md">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-semibold mb-2">Public Survey Video: Yellow River Basin</h2>
+              <p className="mb-4">
+                This video presents a public survey on wetland protection in Qinghai and Shandong, providing grassroots perspectives.
+              </p>
+              <div className="aspect-video">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/Hvl-EUzgDHo"
+                  title="Public Survey on Wetland Protection"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Survey Form */}
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+          <Card className="rounded-2xl shadow-md">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-semibold mb-4">Planned Survey & Next Steps</h2>
+              <p className="mb-4">
+                Please share your background and thoughts on wetland conservation. Your feedback will guide improvements and real-world efforts.
+              </p>
+              <form onSubmit={handleSubmit} className="space-y-6 bg-white p-4 rounded-md shadow-inner">
+                <div>
+                  <label htmlFor="socialIdentity" className="block mb-2 font-medium text-green-900">
+                    Your Role / Social Identity:
+                  </label>
+                  <input
+                    id="socialIdentity"
+                    name="socialIdentity"
+                    type="text"
+                    placeholder="e.g. Student, Researcher..."
+                    className="w-full border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+                    value={formData.socialIdentity}
+                    onChange={handleChange}
+                    required
+                  />
+                  <p className="text-xs text-green-700 mt-1">Briefly describe your role or occupation.</p>
+                </div>
+
+                <div>
+                  <label htmlFor="awareness" className="block mb-2 font-medium text-green-900">
+                    Your Awareness Level:
+                  </label>
+                  <select
+                    id="awareness"
+                    name="awareness"
+                    value={formData.awareness}
+                    onChange={handleChange}
+                    className="w-full border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+                  >
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                  </select>
+                  <p className="text-xs text-green-700 mt-1">How familiar are you with wetland ecosystems?</p>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block mb-2 font-medium text-green-900">
+                    Comments or Suggestions:
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    placeholder="Share your ideas or experiences..."
+                    className="w-full border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+                    value={formData.message}
+                    onChange={handleChange}
+                  ></textarea>
+                </div>
+
                 <Button type="submit" className="bg-green-700 text-white font-semibold px-4 py-2 rounded hover:bg-green-800 transition">
                   Submit
                 </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </main>
+
+      <section className="mt-16">
+        <h2 className="text-xl font-semibold mb-4 text-center">References</h2>
+        <ul className="text-sm text-green-800 list-disc list-inside space-y-2">
+          <li>Leibowitz, S. G., & Nadeau, T. L. (2003). Isolated wetlands: State-of-the-science and future directions. <em>Wetlands, 23</em>(3), 663–684. https://doi.org/10.1672/0277-5212(2003)023[0663:IWSAFD]2.0.CO;2</li>
+          <li>Salimi, S., Almuktar, S. A. A. A. N., & Scholz, M. (2021). Impact of climate change on wetland ecosystems: A critical review of experimental wetlands. <em>Journal of Environmental Management, 286</em>, 112160. https://doi.org/10.1016/j.jenvman.2021.112160</li>
+          <li>Deng, Y.-C., & Jiang, X. (2023). Wetland Protection Law of the People’s Republic of China: New efforts in wetland conservation. <em>The International Journal of Marine and Coastal Law, 38</em>(1), 141–160. https://doi.org/10.1163/15718085-bja10115</li>
+          <li>O’Donnell, T. K., & Galat, D. L. (2008). Evaluating success criteria and project monitoring in river enhancement within an adaptive management framework. <em>Environmental Management, 41</em>(1), 90–105. https://doi.org/10.1007/s00267-007-9010-5</li>
+          <li>Krasny, M. E., & Tidball, K. G. (2009). Community gardens as contexts for science, stewardship, and civic action learning. <em>Cities and the Environment, 2</em>(1), Article 8. https://digitalcommons.lmu.edu/cate/vol2/iss1/8</li>
+          <li>China Biodiversity Conservation and Green Development Foundation. (2023, June). Public survey report on wetland protection in the Yellow River Basin [Video]. YouTube. https://www.youtube.com/watch?v=Hvl-EUzgDHo</li>
+        </ul>
+      </section>
+
+      <footer className="text-center mt-12 text-sm text-green-700">
+        © 2025 Wetland Conservation Project by Jiayi Liu. All rights reserved.
+      </footer>
+    </div>
+  );
+}
+
               </form>
             </CardContent>
           </Card>

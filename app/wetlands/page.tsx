@@ -1,17 +1,47 @@
+// @ts-nocheck
 'use client';
+
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 export default function WetlandsPage() {
   return (
-    <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">
-      <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.6 }}>
-        <h1 className="text-4xl font-bold mb-4 text-center">General Wetlands</h1>
-        <p className="max-w-3xl mx-auto mb-6">
-          Introduction to wetland definitions and types...
+    <main className="min-h-screen bg-green-50 text-green-900 p-8 space-y-8">
+      {/* 顶部返回 */}
+      <Link href="/" className="text-blue-600 underline">
+        ← Back Home
+      </Link>
+
+      <h1 className="text-3xl font-bold">General Wetlands</h1>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">What are Wetlands?</h2>
+        <p>
+          Wetlands are transitional zones between terrestrial and aquatic
+          ecosystems where the water table is usually at or near the surface, or
+          the land is covered by shallow water. They include marshes, swamps,
+          bogs, fens, mangroves and peatlands.
         </p>
-        <Link href="/"><button className="px-4 py-2 bg-wetland-blue text-white rounded">← Back to Home</button></Link>
-      </motion.div>
-    </div>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Major Types</h2>
+        <ul className="list-disc list-inside space-y-1 ml-4">
+          <li><strong>Marshes</strong> – dominated by soft-stemmed plants.</li>
+          <li><strong>Swamps</strong> – forested wetlands with woody plants.</li>
+          <li><strong>Bogs &amp; Fens</strong> – peat-accumulating, often acidic.</li>
+          <li><strong>Mangroves</strong> – coastal, salt-tolerant tree systems.</li>
+        </ul>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Global Distribution</h2>
+        <p>
+          Wetlands occur on every continent except Antarctica. The largest
+          tropical wetland is the <em>Pantanal</em> in South America, while
+          Canada and Russia hold vast boreal peatlands. Coastal mangroves line
+          tropical and subtropical shorelines worldwide.
+        </p>
+      </section>
+    </main>
   );
 }

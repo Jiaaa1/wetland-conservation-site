@@ -257,6 +257,13 @@ export default function HomePage() {
                 protection. Your feedback will help shape future improvements to
                 this project and guide real-world conservation efforts.
               </p>
+              {/* ───── 友好提示 ───── */}
+              <p className="mb-6 text-green-800 leading-relaxed">
+                🌿 Your story matters. Whether you’ve trekked through wetlands or only seen them in photos,
+                <strong>every perspective helps us paint a fuller picture.</strong>
+                Feel free to share as much—or as little—as you like.
+                We read each response with gratitude 💚
+              </p>
 
               <form
                 onSubmit={handleSubmit}

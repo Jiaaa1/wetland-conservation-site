@@ -64,8 +64,11 @@ export default function HomePage() {
         {/* Survey Form with gentle prompt */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
           viewport={{ once: true }}
         >
           <Card className="rounded-2xl shadow-md">

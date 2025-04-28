@@ -69,12 +69,6 @@ export default function HomePage() {
         >
           Local&nbsp;Community&nbsp;Involvement
         </Link>
-        <Link
-          href="/survey"
-          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
-        >
-          Public&nbsp;Survey&nbsp;&amp;&nbsp;Feedback
-        </Link>
       </nav>
 
       {/* ───────── 头部 Hero ───────── */}

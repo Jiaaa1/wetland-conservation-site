@@ -222,7 +222,7 @@ export default function HomePage() {
               {/* 图 1：生活垃圾污染 */}
               <figure className="mb-6">
                 <img
-                  src="/images/pollution_trash.jpg"
+                  src="/pollution_trash.jpg"
                   alt="Plastic bottles and household trash floating between wetland reeds"
                   className="rounded-xl w-full object-cover"
                   />
@@ -233,7 +233,7 @@ export default function HomePage() {
               {/* 图 2：工业油污 */}
               <figure>
                 <img
-                  src="/images/pollution_oil.jpg"
+                  src="/pollution_oil.jpg"
                   alt="Rainbow-colored oil sheen covering the surface of a wetland pond"
                   className="rounded-xl w-full object-cover"
                   />

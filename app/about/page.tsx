@@ -24,7 +24,7 @@ export default function AboutPage() {
 
         {/* 团队照片 */}
         <img
-          src="/images/about_team.jpg"
+          src="/about_team.jpg"
           alt="Panoramic view of Luyang Lake Wetland Park shot on 6 September 2024 by Jiayi Liu"
           className="rounded-xl w-full object-cover"
         />

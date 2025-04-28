@@ -19,7 +19,7 @@ export default function LawsPage() {
         <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
           <img
             src="policy_globe.jpg"
-            alt="World map highlighting countries with wetland protection laws"
+            alt="World map highlighting countries with national wetland protection laws in green, created for the Wetland Conservation Project"
             className="w-full h-72 object-cover"
           />
           <div className="p-6">

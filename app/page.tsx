@@ -124,11 +124,12 @@ export default function HomePage() {
         >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
+              {/* Why Wetlands Matter */}
               <img
                 src="/wetland.jpg"
-                alt="Aerial wetland view"
+                alt="Aerial view of a lush green wetland with winding waterways"
                 className="rounded-xl mb-4"
-              />
+                />
               <h2 className="text-2xl font-semibold mb-2">
                 Why Wetlands Matter
               </h2>
@@ -207,44 +208,42 @@ export default function HomePage() {
           </Card>
         </motion.div>
         {/* ───────── Wetland Pollution Snapshots ───────── */}
-<motion.div
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  viewport={{ once: true }}
->
-  <Card className="rounded-2xl shadow-md">
-    <CardContent className="p-6">
-      <h2 className="text-2xl font-semibold mb-4">
-        Wetland Pollution Snapshots
-      </h2>
-
-      {/* 图 1：生活垃圾污染 */}
-      <figure className="mb-6">
-        <img
-          src="/images/pollution_trash.jpg"
-          alt="Plastic bottles and trash floating among wetland reeds"
-          className="rounded-xl w-full object-cover"
-        />
-        <figcaption className="mt-2 text-sm text-green-800 italic">
-          Discarded plastic and household waste threaten aquatic life.
-        </figcaption>
-      </figure>
-
-      {/* 图 2：工业油污 */}
-      <figure>
-        <img
-          src="/images/pollution_oil.jpg"
-          alt="Oil sheen and chemical discoloration on the surface of a wetland pond"
-          className="rounded-xl w-full object-cover"
-        />
-        <figcaption className="mt-2 text-sm text-green-800 italic">
-          Industrial runoff can create toxic slicks that suffocate vegetation and wildlife.
-        </figcaption>
-      </figure>
-    </CardContent>
-  </Card>
-</motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          >
+          <Card className="rounded-2xl shadow-md">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-semibold mb-4">
+                Wetland Pollution Snapshots
+              </h2>
+              {/* 图 1：生活垃圾污染 */}
+              <figure className="mb-6">
+                <img
+                  src="/images/pollution_trash.jpg"
+                  alt="Plastic bottles and household trash floating between wetland reeds"
+                  className="rounded-xl w-full object-cover"
+                  />
+                <figcaption className="mt-2 text-sm text-green-800 italic">
+                  Discarded plastic and household waste threaten aquatic life.
+                </figcaption>
+              </figure>
+              {/* 图 2：工业油污 */}
+              <figure>
+                <img
+                  src="/images/pollution_oil.jpg"
+                  alt="Rainbow-colored oil sheen covering the surface of a wetland pond"
+                  className="rounded-xl w-full object-cover"
+                  />
+                <figcaption className="mt-2 text-sm text-green-800 italic">
+                  Industrial runoff can create toxic slicks that suffocate vegetation and wildlife.
+                </figcaption>
+              </figure>
+            </CardContent>
+          </Card>
+        </motion.div>
 
         {/* Public Survey Video */}
         <motion.div

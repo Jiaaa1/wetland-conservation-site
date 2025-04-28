@@ -11,29 +11,57 @@ export default function AboutPage() {
         <Button>&larr; Home</Button>
       </Link>
 
-      {/* 项目介绍 */}
-      <section className="max-w-3xl mx-auto space-y-6">
-        <h1 className="text-4xl font-bold">About This Project</h1>
+      {/* 页面标题 */}
+      <h1 className="text-4xl font-bold mb-6 text-center">
+        About This Project
+      </h1>
 
-        <p>
-          This website began as a small personal initiative to make wetland
-          science approachable. Each page combines academic research with field
-          observations, hoping to inspire students, policy-makers and everyday
-          visitors to protect these fragile ecosystems.
-        </p>
-
-        {/* 团队照片 */}
+      {/* 个人照片 */}
+      <figure className="max-w-3xl mx-auto mb-8">
         <img
           src="/about_team.jpg"
-          alt="Panoramic view of Luyang Lake Wetland Park shot on 6 September 2024 by Jiayi Liu"
-          className="rounded-xl w-full object-cover"
+          alt="Jiayi Liu standing beside the boardwalk in Luyang Lake Wetland Park, September 6 2024"
+          className="rounded-xl w-full object-cover shadow-md"
         />
+        <figcaption className="text-sm text-green-700 mt-2 text-center">
+          Photo taken by the author at Luyang Lake Wetland Park (6 Sep 2024)
+        </figcaption>
+      </figure>
+
+      {/* 叙述段落（加入人情味） */}
+      <section className="prose prose-green max-w-3xl mx-auto leading-relaxed">
+        <p>
+          <strong>Wetlands are among the most ecologically valuable
+          ecosystems on Earth, but they are also among the most vulnerable
+          to threats.</strong> My research question stemmed from a biology-class
+          discussion last year and the stark reality of dwindling wetlands
+          worldwide. During a trip through China’s Greater Xing’an Mountains
+          I visited <em>Eerguna National Wetland Park</em>—celebrated as the
+          “First Wetland of Asia.” Walking the wooden walkway through birch
+          forests and up to a hilltop platform, I watched the Genhe River
+          snake across endless reeds and felt the wetland’s quiet power. Yet
+          the same guide who introduced its beauty also pointed out the
+          scars of over-grazing and mass tourism nibbling away at its
+          edges.
+        </p>
 
         <p>
-          Taken on <strong>6 September 2024</strong> at <em>Luyang Lake Wetland
-          Park</em>, this photo reminds us why the project matters: real places,
-          real biodiversity, and real communities who depend on healthy
-          wetlands.
+          These memories, together with smaller encounters at local ponds
+          and nature reserves, revealed that wetlands are more than scenic
+          backdrops—they are living systems that filter water, blunt floods,
+          store carbon and harbor a stunning array of life. Losing them
+          accelerates biodiversity loss and leaves communities more
+          vulnerable to climate extremes.
+        </p>
+
+        <p>
+          That tension—between conversion pressures and conservation
+          advocacy—shapes the focus of this website. How can we compare
+          global legal frameworks, mobilise local communities and channel
+          personal stories to safeguard wetlands before they slip away?
+          You’ll find preliminary answers, background research and an
+          invitation to contribute your own insights in the pages that
+          follow.
         </p>
       </section>
     </main>

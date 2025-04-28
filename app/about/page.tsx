@@ -1,43 +1,65 @@
-// @ts-nocheck
 'use client';
 
 import Link from 'next/link';
+import { Button } from '../../components/ui/button';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-green-50 text-green-900 p-8 space-y-8">
-      <Link href="/" className="text-blue-600 underline">
-        ← Back Home
+    <main className="min-h-screen bg-green-50 p-10 text-green-900 font-serif">
+      {/* 返回首页 */}
+      <Link href="/" className="mb-6 inline-block">
+        <Button>&larr; Home</Button>
       </Link>
 
-      <h1 className="text-3xl font-bold">About This Project</h1>
+      {/* 特色图片 */}
+      <div className="mb-8">
+        <img
+          src="/about_team.jpg"
+          alt=""This photo taken at Luyang Lake Wetland Park on 6 September 2024""
+          className="rounded-2xl w-full object-cover shadow-sm"
+        />
+      </div>
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Purpose</h2>
-        <p>
-          This website was created as a multimodal communication project to
-          raise awareness of wetland conservation, compare global legal
-          frameworks and showcase community-driven solutions.
-        </p>
-      </section>
+      {/* 正文 */}
+      <h1 className="text-4xl font-bold mb-4">About This Project</h1>
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Methodology</h2>
-        <p>
-          Content is compiled through literature review, policy comparison and a
-          public survey. The site is built with Next.js 13, Tailwind CSS and
-          deployed on Vercel.
-        </p>
-      </section>
+      <p className="mb-4">
+        The <strong>Wetland Conservation Project</strong> began as a collaborative
+        effort among environmental science students who share a passion for
+        preserving vital wetland ecosystems. Our goal is to create an engaging,
+        data-driven platform that connects policy, science and community action.
+      </p>
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Future Work</h2>
-        <ul className="list-disc list-inside space-y-1 ml-4">
-          <li>Embed interactive data visualisations.</li>
-          <li>Publish survey results dashboards.</li>
-          <li>Add case-study map of successful restorations.</li>
-        </ul>
-      </section>
+      <h2 className="text-2xl font-semibold mt-8 mb-2">Who We Are</h2>
+      <ul className="list-disc list-inside space-y-1">
+        <li><strong>Jiayi Liu</strong> – Project lead, policy analysis</li>
+        <li><strong>Ana Santos</strong> – Field survey coordinator</li>
+        <li><strong>Marco Nguyen</strong> – GIS &amp; data visualization</li>
+        <li><strong>Sara Ibanez</strong> – Community outreach</li>
+      </ul>
+
+      <h2 className="text-2xl font-semibold mt-8 mb-2">Project Objectives</h2>
+      <ol className="list-decimal list-inside space-y-1">
+        <li>Compare global wetland protection laws.</li>
+        <li>Document local community involvement successes.</li>
+        <li>Gather public feedback through interactive surveys.</li>
+        <li>Share best-practice resources for educators and NGOs.</li>
+      </ol>
+
+      <h2 className="text-2xl font-semibold mt-8 mb-2">Get Involved</h2>
+      <p>
+        We welcome collaboration! If you’d like to contribute data, share a
+        story, or translate resources, please reach out via the contact form on
+        our survey page, or open an issue on our&nbsp;
+        <a
+          href="https://github.com/your-org/wetland-conservation-site"
+          className="text-wetland-blue underline"
+          target="_blank"
+        >
+          GitHub repo
+        </a>
+        .
+      </p>
     </main>
   );
 }

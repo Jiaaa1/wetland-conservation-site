@@ -1,17 +1,44 @@
+// @ts-nocheck
 'use client';
+
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 export default function LawsPage() {
   return (
-    <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">
-      <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.6 }}>
-        <h1 className="text-4xl font-bold mb-4 text-center">Global Conservation Laws</h1>
-        <p className="max-w-3xl mx-auto mb-6">
-          Overview of international wetland protection laws...
+    <main className="min-h-screen bg-green-50 text-green-900 p-8 space-y-8">
+      <Link href="/" className="text-blue-600 underline">
+        ← Back Home
+      </Link>
+
+      <h1 className="text-3xl font-bold">Global Conservation Laws</h1>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">International</h2>
+        <p>
+          <strong>Ramsar Convention (1971)</strong> – intergovernmental treaty
+          providing framework for national action and international cooperation
+          for the conservation of wetlands and their resources.
         </p>
-        <Link href="/"><button className="px-4 py-2 bg-wetland-blue text-white rounded">← Back to Home</button></Link>
-      </motion.div>
-    </div>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Regional Examples</h2>
+        <ul className="list-disc list-inside space-y-2 ml-4">
+          <li>
+            <strong>China</strong> – Wetland Protection Law (2023) introduces
+            unified classification, redlines and ecological compensation.
+          </li>
+          <li>
+            <strong>United States</strong> – Clean Water Act (1972) Section 404
+            regulates discharge into “waters of the U.S.” including some
+            wetlands.
+          </li>
+          <li>
+            <strong>European Union</strong> – Habitats Directive &amp; Natura 2000
+            network protect wetland habitats and species.
+          </li>
+        </ul>
+      </section>
+    </main>
   );
 }

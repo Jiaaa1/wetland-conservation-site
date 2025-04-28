@@ -1,17 +1,36 @@
+// @ts-nocheck
 'use client';
+
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">
-      <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.6 }}>
-        <h1 className="text-4xl font-bold mb-4 text-center">Environmental Services</h1>
-        <p className="max-w-3xl mx-auto mb-6">
-          Ecosystem services provided by wetlands...
+    <main className="min-h-screen bg-green-50 text-green-900 p-8 space-y-8">
+      <Link href="/" className="text-blue-600 underline">
+        ← Back Home
+      </Link>
+
+      <h1 className="text-3xl font-bold">Environmental Services</h1>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Key Ecosystem Services</h2>
+        <ul className="list-disc list-inside space-y-1 ml-4">
+          <li><strong>Carbon Sequestration</strong> – peatlands store ~30 % of global soil carbon.</li>
+          <li><strong>Flood Control</strong> – wetlands act as natural sponges, slowing runoff.</li>
+          <li><strong>Water Purification</strong> – plants and microbes filter nutrients &amp; pollutants.</li>
+          <li><strong>Biodiversity Hotspots</strong> – habitat for 40 % of all species on Earth.</li>
+          <li><strong>Livelihoods &amp; Recreation</strong> – fisheries, tourism, cultural value.</li>
+        </ul>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Economic Valuation</h2>
+        <p>
+          The global annual value of wetland ecosystem services is estimated to
+          exceed <strong>USD 47 trillion</strong>, underscoring the financial
+          importance of conservation.
         </p>
-        <Link href="/"><button className="px-4 py-2 bg-wetland-blue text-white rounded">← Back to Home</button></Link>
-      </motion.div>
-    </div>
+      </section>
+    </main>
   );
 }

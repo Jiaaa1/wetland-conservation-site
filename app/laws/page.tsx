@@ -32,7 +32,7 @@ export default function LawsPage() {
         {/* 示例世界地图，请将 /images/world_wetland_laws.png 换成你的实际文件 */}
         <Image
           src="/policy_globe.jpg"
-          alt="World map highlighting countries with established wetland-protection legislation"
+          alt="World map highlighting countries with national wetland protection laws in green, created for the Wetland Conservation Project"
           width={1600}
           height={900}
           className="w-full h-auto object-cover"

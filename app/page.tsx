@@ -53,11 +53,11 @@ export default function HomePage() {
 
       {/* 页头 */}
       <header className="text-center py-10">
-        <motion.div<HTMLDivElement>
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-        >
+          >
           <h1 className="text-5xl font-bold mb-3 tracking-tight">
             Wetland Conservation Project
           </h1>
@@ -67,12 +67,12 @@ export default function HomePage() {
           </p>
         </motion.div>
 
-        <motion.div<HTMLDivElement>
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="text-base max-w-2xl mx-auto text-green-800 mt-6 leading-relaxed"
-        >
+          >
           <p><strong>Research Question:</strong> How can international legal frameworks and community engagement strategies work together to enhance wetland conservation outcomes?</p>
           <p className="mt-3"><strong>Target Audience:</strong> Students, educators, and environmentally conscious citizens interested in practical and policy-driven solutions for wetland protection.</p>
           <p className="mt-3"><strong>Importance:</strong> Wetlands are critical for biodiversity and climate regulation but are rapidly degrading. Integrating top-down legal measures with grassroots efforts is urgent for their sustainable future.</p>
@@ -82,12 +82,12 @@ export default function HomePage() {
       {/* 主体内容 */}
       <main className="grid gap-6 max-w-5xl mx-auto">
         {/* Section 1: Why Wetlands Matter */}
-        <motion.div<HTMLDivElement>
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="rounded-2xl shadow-md"
-        >
+          >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
               <img src="/wetland.jpg" alt="Aerial view of wetlands" className="rounded-xl mb-4" />
@@ -99,12 +99,12 @@ export default function HomePage() {
         </motion.div>
 
         {/* Section 2: Global Conservation Laws */}
-        <motion.div<HTMLDivElement>
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="rounded-2xl shadow-md"
-        >
+          >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
               <h2 className="text-2xl font-semibold mb-2">Global Conservation Laws</h2>
@@ -115,12 +115,12 @@ export default function HomePage() {
         </motion.div>
 
         {/* Section 3: Local Community Involvement */}
-        <motion.div<HTMLDivElement>
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
           className="rounded-2xl shadow-md"
-        >
+          >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
               <h2 className="text-2xl font-semibold mb-2">Local Community Involvement</h2>
@@ -131,12 +131,12 @@ export default function HomePage() {
         </motion.div>
 
         {/* Section 4: Public Survey Video */}
-        <motion.div<HTMLDivElement>
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.3 }}
           className="rounded-2xl shadow-md"
-        >
+          >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
               <h2 className="text-2xl font-semibold mb-2">Public Survey Video: Yellow River Basin</h2>
@@ -157,12 +157,12 @@ export default function HomePage() {
         </motion.div>
 
         {/* Section 5: Public Survey & Feedback */}
-        <motion.div<HTMLDivElement>
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
           className="rounded-2xl shadow-md"
-        >
+          >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
               <h2 className="text-2xl font-semibold mb-4">Public Survey & Feedback</h2>

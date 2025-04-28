@@ -30,15 +30,32 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">
 
-      <nav className="mb-6 flex gap-4">
-        <Link href="/wetlands">
-          <Button>General Wetlands</Button>
+      {/* --- 顶部导航栏：七个绿色按钮 --- */}
+      <nav className="flex flex-wrap justify-center gap-4 bg-green-100 py-4 rounded-xl">
+        <Link href="/" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+          Home
         </Link>
-        <Link href="/about">
-          <Button>About This Project</Button>
+        <Link href="/wetlands" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+          General Wetlands
+        </Link>
+        <Link href="/about" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+          About&nbsp;This&nbsp;Project
+        </Link>
+        <Link href="/services" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+          Environmental&nbsp;Services
+        </Link>
+        <Link href="/laws" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+          Global&nbsp;Conservation&nbsp;Laws
+        </Link>
+        <Link href="/community" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+          Local&nbsp;Community&nbsp;Involvement
+        </Link>
+        <Link href="/survey" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+          Public&nbsp;Survey&nbsp;&amp;&nbsp;Feedback
         </Link>
       </nav>
 
+      {/* ----------- 头部 ----------- */}
       <header className="text-center py-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -63,6 +80,7 @@ export default function HomePage() {
         </motion.div>
       </header>
 
+      {/* ----------- 主体 ----------- */}
       <main className="grid gap-6 max-w-5xl mx-auto">
         {/* Why Wetlands Matter */}
         <motion.div
@@ -240,6 +258,7 @@ export default function HomePage() {
         </motion.div>
       </main>
 
+      {/* ----------- 参考文献 ----------- */}
       <section className="mt-16">
         <h2 className="text-xl font-semibold mb-4 text-center">References</h2>
         <ul className="text-sm text-green-800 list-disc list-inside space-y-2">

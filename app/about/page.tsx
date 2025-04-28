@@ -11,55 +11,31 @@ export default function AboutPage() {
         <Button>&larr; Home</Button>
       </Link>
 
-      {/* 特色图片 */}
-      <div className="mb-8">
+      {/* 项目介绍 */}
+      <section className="max-w-3xl mx-auto space-y-6">
+        <h1 className="text-4xl font-bold">About This Project</h1>
+
+        <p>
+          This website began as a small personal initiative to make wetland
+          science approachable. Each page combines academic research with field
+          observations, hoping to inspire students, policy-makers and everyday
+          visitors to protect these fragile ecosystems.
+        </p>
+
+        {/* 团队照片 */}
         <img
-          src="/about_team.jpg"
-          alt=""This photo taken at Luyang Lake Wetland Park on 6 September 2024""
-          className="rounded-2xl w-full object-cover shadow-sm"
+          src="/images/about_team.jpg"
+          alt="Panoramic view of Luyang Lake Wetland Park shot on 6 September 2024 by Jiayi Liu"
+          className="rounded-xl w-full object-cover"
         />
-      </div>
 
-      {/* 正文 */}
-      <h1 className="text-4xl font-bold mb-4">About This Project</h1>
-
-      <p className="mb-4">
-        The <strong>Wetland Conservation Project</strong> began as a collaborative
-        effort among environmental science students who share a passion for
-        preserving vital wetland ecosystems. Our goal is to create an engaging,
-        data-driven platform that connects policy, science and community action.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-2">Who We Are</h2>
-      <ul className="list-disc list-inside space-y-1">
-        <li><strong>Jiayi Liu</strong> – Project lead, policy analysis</li>
-        <li><strong>Ana Santos</strong> – Field survey coordinator</li>
-        <li><strong>Marco Nguyen</strong> – GIS &amp; data visualization</li>
-        <li><strong>Sara Ibanez</strong> – Community outreach</li>
-      </ul>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-2">Project Objectives</h2>
-      <ol className="list-decimal list-inside space-y-1">
-        <li>Compare global wetland protection laws.</li>
-        <li>Document local community involvement successes.</li>
-        <li>Gather public feedback through interactive surveys.</li>
-        <li>Share best-practice resources for educators and NGOs.</li>
-      </ol>
-
-      <h2 className="text-2xl font-semibold mt-8 mb-2">Get Involved</h2>
-      <p>
-        We welcome collaboration! If you’d like to contribute data, share a
-        story, or translate resources, please reach out via the contact form on
-        our survey page, or open an issue on our&nbsp;
-        <a
-          href="https://github.com/your-org/wetland-conservation-site"
-          className="text-wetland-blue underline"
-          target="_blank"
-        >
-          GitHub repo
-        </a>
-        .
-      </p>
+        <p>
+          Taken on <strong>6 September 2024</strong> at <em>Luyang Lake Wetland
+          Park</em>, this photo reminds us why the project matters: real places,
+          real biodiversity, and real communities who depend on healthy
+          wetlands.
+        </p>
+      </section>
     </main>
   );
 }

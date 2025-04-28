@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Card, CardContent } from "../components/ui/card";
-import { Button } from "../components/ui/button";
-import { motion } from "framer-motion";
+import { Card, CardContent } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -22,40 +22,62 @@ export default function HomePage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Thank you! We have recorded your feedback. Your identity: ${formData.socialIdentity}`);
+    alert(
+      `Thank you! We have recorded your feedback. Your identity: ${formData.socialIdentity}`
+    );
     console.log(formData);
     setFormData({ socialIdentity: '', awareness: 'low', message: '' });
   };
 
   return (
     <div className="min-h-screen bg-green-50 text-green-900 font-serif p-6">
-
-      {/* --- 顶部导航栏：七个绿色按钮 --- */}
+      {/* ───────── 顶部导航栏 ───────── */}
       <nav className="flex flex-wrap justify-center gap-4 bg-green-100 py-4 rounded-xl">
-        <Link href="/" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+        <Link
+          href="/"
+          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+        >
           Home
         </Link>
-        <Link href="/wetlands" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
-          General Wetlands
+        <Link
+          href="/wetlands"
+          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+        >
+          General&nbsp;Wetlands
         </Link>
-        <Link href="/about" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+        <Link
+          href="/about"
+          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+        >
           About&nbsp;This&nbsp;Project
         </Link>
-        <Link href="/services" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+        <Link
+          href="/services"
+          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+        >
           Environmental&nbsp;Services
         </Link>
-        <Link href="/laws" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+        <Link
+          href="/laws"
+          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+        >
           Global&nbsp;Conservation&nbsp;Laws
         </Link>
-        <Link href="/community" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+        <Link
+          href="/community"
+          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+        >
           Local&nbsp;Community&nbsp;Involvement
         </Link>
-        <Link href="/survey" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+        <Link
+          href="/survey"
+          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+        >
           Public&nbsp;Survey&nbsp;&amp;&nbsp;Feedback
         </Link>
       </nav>
 
-      {/* ----------- 头部 ----------- */}
+      {/* ───────── 头部 Hero ───────── */}
       <header className="text-center py-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -66,21 +88,29 @@ export default function HomePage() {
             Wetland Conservation Project
           </h1>
           <p className="text-lg max-w-2xl mx-auto">
-            Exploring community engagement and international policies for sustainable wetland management.
+            Exploring community engagement and international policies for
+            sustainable wetland management.
             <br />
             <span className="text-sm text-green-700 italic">
               Created by Jiayi Liu
             </span>
           </p>
           <p className="mt-6 text-base max-w-3xl mx-auto text-green-800 leading-relaxed">
-            <strong>Research Question:</strong> How can we enhance wetland conservation by fostering community engagement and comparing international protection laws?<br />
-            <strong>Target Audience:</strong> Students, environmental advocates, and policymakers.<br />
-            <strong>Importance:</strong> As climate change and biodiversity loss intensify, promoting wetlands' sustainable management is vital for ecological resilience and future generations.
+            <strong>Research Question:</strong> How can we enhance wetland
+            conservation by fostering community engagement and comparing
+            international protection laws?
+            <br />
+            <strong>Target Audience:</strong> Students, environmental advocates,
+            and policymakers.
+            <br />
+            <strong>Importance:</strong> As climate change and biodiversity loss
+            intensify, promoting wetlands&#39; sustainable management is vital
+            for ecological resilience and future generations.
           </p>
         </motion.div>
       </header>
 
-      {/* ----------- 主体 ----------- */}
+      {/* ───────── 主体内容 ───────── */}
       <main className="grid gap-6 max-w-5xl mx-auto">
         {/* Why Wetlands Matter */}
         <motion.div
@@ -100,10 +130,16 @@ export default function HomePage() {
                 Why Wetlands Matter
               </h2>
               <p>
-                Wetlands are vital ecosystems that support biodiversity, improve water quality, mitigate floods, and store carbon. Protecting them is crucial for both people and the planet.
+                Wetlands are vital ecosystems that support biodiversity, improve
+                water quality, mitigate floods, and store carbon. Protecting
+                them is crucial for both people and the planet.
               </p>
               <p className="mt-2">
-                According to Leibowitz and Nadeau (2003), isolated wetlands play a critical role in biodiversity, water purification, and maintaining hydrologic balance. Salimi et al. (2021) further emphasize their contribution to climate regulation through carbon storage.
+                According to Leibowitz and Nadeau (2003), isolated wetlands play
+                a critical role in biodiversity, water purification, and
+                maintaining hydrologic balance. Salimi et al. (2021) further
+                emphasize their contribution to climate regulation through
+                carbon storage.
               </p>
             </CardContent>
           </Card>
@@ -118,12 +154,22 @@ export default function HomePage() {
         >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">Global Conservation Laws</h2>
+              <h2 className="text-2xl font-semibold mb-2">
+                Global Conservation Laws
+              </h2>
               <p>
-                Countries like China, the U.S., and members of the EU have developed different legal approaches to wetland protection. While China's policy is centralized and state-led, the U.S. focuses on pollution control through acts like the Clean Water Act, and the EU emphasizes biodiversity with initiatives like Natura 2000.
+                Countries like China, the U.S., and members of the EU have
+                developed different legal approaches to wetland protection. While
+                China&#39;s policy is centralized and state-led, the U.S. focuses
+                on pollution control through acts like the Clean Water Act, and
+                the EU emphasizes biodiversity with initiatives like Natura
+                2000.
               </p>
               <p className="mt-2">
-                Deng and Jiang (2023) explain how China’s Wetland Protection Law marks a legal shift aligning national strategies with global goals. These international differences reflect each region’s environmental priorities.
+                Deng and Jiang (2023) explain how China’s Wetland Protection Law
+                marks a legal shift aligning national strategies with global
+                goals. These international differences reflect each region’s
+                environmental priorities.
               </p>
             </CardContent>
           </Card>
@@ -138,12 +184,21 @@ export default function HomePage() {
         >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">Local Community Involvement</h2>
+              <h2 className="text-2xl font-semibold mb-2">
+                Local Community Involvement
+              </h2>
               <p>
-                Engaging local residents in conservation efforts leads to more sustainable and effective outcomes. Community education, participatory policy-making, and indigenous knowledge play a key role.
+                Engaging local residents in conservation efforts leads to more
+                sustainable and effective outcomes. Community education,
+                participatory policy-making, and indigenous knowledge play a key
+                role.
               </p>
               <p className="mt-2">
-                O’Donnell and Galat (2008) emphasize the role of adaptive, community-led restoration for long-term success. Krasny and Tidball (2009) show that when people learn through shared action—like gardens or volunteering—they build deeper care for ecosystems.
+                O’Donnell and Galat (2008) emphasize the role of adaptive,
+                community-led restoration for long-term success. Krasny and
+                Tidball (2009) show that when people learn through shared
+                action—like gardens or volunteering—they build deeper care for
+                ecosystems.
               </p>
             </CardContent>
           </Card>
@@ -158,9 +213,14 @@ export default function HomePage() {
         >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">Public Survey Video: Yellow River Basin</h2>
+              <h2 className="text-2xl font-semibold mb-2">
+                Public Survey Video: Yellow River Basin
+              </h2>
               <p className="mb-4">
-                This video presents a public awareness survey about wetland protection in Qinghai and Shandong. It provides valuable grassroots perspectives, which are essential for understanding real-world conservation awareness.
+                This video presents a public awareness survey about wetland
+                protection in Qinghai and Shandong. It provides valuable
+                grassroots perspectives, which are essential for understanding
+                real-world conservation awareness.
               </p>
               <div className="aspect-video">
                 <iframe
@@ -186,14 +246,24 @@ export default function HomePage() {
         >
           <Card className="rounded-2xl shadow-md">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-4">Planned Survey & Next Steps</h2>
+              <h2 className="text-2xl font-semibold mb-4">
+                Planned Survey &amp; Next Steps
+              </h2>
               <p className="mb-4">
-                Please share with us your background and thoughts on wetland protection. Your feedback will help shape future improvements to this project and guide real-world conservation efforts.
+                Please share with us your background and thoughts on wetland
+                protection. Your feedback will help shape future improvements to
+                this project and guide real-world conservation efforts.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6 bg-white p-4 rounded-md shadow-inner">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6 bg-white p-4 rounded-md shadow-inner"
+              >
                 <div>
-                  <label htmlFor="socialIdentity" className="block mb-2 font-medium text-green-900">
+                  <label
+                    htmlFor="socialIdentity"
+                    className="block mb-2 font-medium text-green-900"
+                  >
                     Your Role / Social Identity:
                   </label>
                   <input
@@ -207,12 +277,16 @@ export default function HomePage() {
                     required
                   />
                   <p className="text-xs text-green-700 mt-1">
-                    Please briefly describe your role or occupation that might influence your perspective on wetland conservation.
+                    Please briefly describe your role or occupation that might
+                    influence your perspective on wetland conservation.
                   </p>
                 </div>
 
                 <div>
-                  <label htmlFor="awareness" className="block mb-2 font-medium text-green-900">
+                  <label
+                    htmlFor="awareness"
+                    className="block mb-2 font-medium text-green-900"
+                  >
                     Your Awareness Level:
                   </label>
                   <select
@@ -227,12 +301,16 @@ export default function HomePage() {
                     <option value="high">High</option>
                   </select>
                   <p className="text-xs text-green-700 mt-1">
-                    How familiar are you with wetland ecosystems and conservation practices?
+                    How familiar are you with wetland ecosystems and
+                    conservation practices?
                   </p>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block mb-2 font-medium text-green-900">
+                  <label
+                    htmlFor="message"
+                    className="block mb-2 font-medium text-green-900"
+                  >
                     Any Comments or Suggestions:
                   </label>
                   <textarea
@@ -258,16 +336,45 @@ export default function HomePage() {
         </motion.div>
       </main>
 
-      {/* ----------- 参考文献 ----------- */}
+      {/* ───────── 参考文献 ───────── */}
       <section className="mt-16">
         <h2 className="text-xl font-semibold mb-4 text-center">References</h2>
         <ul className="text-sm text-green-800 list-disc list-inside space-y-2">
-          <li>Leibowitz, S. G., & Nadeau, T. L. (2003). Isolated wetlands: State-of-the-science and future directions. <em>Wetlands, 23</em>(3), 663–684. https://doi.org/10.1672/0277-5212(2003)023[0663:IWSAFD]2.0.CO;2</li>
-          <li>Salimi, S., Almuktar, S. A. A. A. N., & Scholz, M. (2021). Impact of climate change on wetland ecosystems: A critical review of experimental wetlands. <em>Journal of Environmental Management, 286</em>, 112160. https://doi.org/10.1016/j.jenvman.2021.112160</li>
-          <li>Deng, Y.-C., & Jiang, X. (2023). Wetland Protection Law of the People’s Republic of China: New efforts in wetland conservation. <em>The International Journal of Marine and Coastal Law, 38</em>(1), 141–160. https://doi.org/10.1163/15718085-bja10115</li>
-          <li>O’Donnell, T. K., & Galat, D. L. (2008). Evaluating success criteria and project monitoring in river enhancement within an adaptive management framework. <em>Environmental Management, 41</em>(1), 90–105. https://doi.org/10.1007/s00267-007-9010-5</li>
-          <li>Krasny, M. E., & Tidball, K. G. (2009). Community gardens as contexts for science, stewardship, and civic action learning. <em>Cities and the Environment, 2</em>(1), Article 8. https://digitalcommons.lmu.edu/cate/vol2/iss1/8</li>
-          <li>China Biodiversity Conservation and Green Development Foundation. (2023, June). Public survey report on wetland protection in the Yellow River Basin [Video]. YouTube. https://www.youtube.com/watch?v=Hvl-EUzgDHo</li>
+          <li>
+            Leibowitz, S. G., &amp; Nadeau, T. L. (2003). Isolated wetlands:
+            State-of-the-science and future directions. <em>Wetlands, 23</em>(3),
+            663–684. https://doi.org/10.1672/0277-5212(2003)023[0663:IWSAFD]2.0.CO;2
+          </li>
+          <li>
+            Salimi, S., Almuktar, S. A. A. A. N., &amp; Scholz, M. (2021).
+            Impact of climate change on wetland ecosystems: A critical review of
+            experimental wetlands. <em>Journal of Environmental Management, 286</em>,
+            112160. https://doi.org/10.1016/j.jenvman.2021.112160
+          </li>
+          <li>
+            Deng, Y.-C., &amp; Jiang, X. (2023). Wetland Protection Law of the
+            People’s Republic of China: New efforts in wetland conservation.{' '}
+            <em>The International Journal of Marine and Coastal Law, 38</em>(1),
+            141–160. https://doi.org/10.1163/15718085-bja10115
+          </li>
+          <li>
+            O’Donnell, T. K., &amp; Galat, D. L. (2008). Evaluating success
+            criteria and project monitoring in river enhancement within an
+            adaptive management framework. <em>Environmental Management, 41</em>(1),
+            90–105. https://doi.org/10.1007/s00267-007-9010-5
+          </li>
+          <li>
+            Krasny, M. E., &amp; Tidball, K. G. (2009). Community gardens as
+            contexts for science, stewardship, and civic action learning.{' '}
+            <em>Cities and the Environment, 2</em>(1), Article 8.
+            https://digitalcommons.lmu.edu/cate/vol2/iss1/8
+          </li>
+          <li>
+            China Biodiversity Conservation and Green Development Foundation.
+            (2023, June). Public survey report on wetland protection in the
+            Yellow River Basin [Video]. YouTube.
+            https://www.youtube.com/watch?v=Hvl-EUzgDHo
+          </li>
         </ul>
       </section>
 

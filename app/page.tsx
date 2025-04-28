@@ -100,6 +100,15 @@ export default function HomePage() {
             <strong>Importance:</strong> As climate change and biodiversity loss
             intensify, promoting wetlands&#39; sustainable management is vital
             for ecological resilience and future generations.
+            {/* --- 温馨邀请语 --- */}
+            <p className="mt-6 text-lg max-w-3xl mx-auto text-green-700 leading-relaxed">
+              Wetlands aren’t just distant landscapes;&nbsp;
+              <strong>they’re living, breathing neighbors in our global backyard.</strong>&nbsp;
+              Whether you’re a student, a scientist, or simply someone who loves the sound of migratory birds at dawn,
+              <em>your</em> curiosity and voice are vital. <br />
+              Grab a cup of tea, explore the pages, and let’s shape a healthier future for these quietly magnificent ecosystems—together.
+            </p>
+
           </p>
         </motion.div>
       </header>
